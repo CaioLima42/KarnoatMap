@@ -30,11 +30,7 @@ func CheckMintermDifference(min1, min2 string)bool{
 
 	xorValue := min1b ^ min2b
 
-	if xorValue & (xorValue - 1) == 0{
-		return true
-	} 
-	return false
-
+	return xorValue & (xorValue - 1) == 0
 }
 
 func MergeMinterms(min1, min2 string)string{
